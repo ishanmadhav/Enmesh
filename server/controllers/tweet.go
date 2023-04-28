@@ -8,6 +8,18 @@ func GetTweet(c *gin.Context) {
 	})
 }
 
+func GetAllTweets(c *gin.Context){
+	c.JSON(200, gin.H{
+		"body": "List of all tweets",
+	})
+}
+
+func DeleteAllTweets(c *gin.Context){
+	c.JSON(200, gin.H{
+		"message": "All tweets deleted",
+	})
+}
+
 func PostTweet(c *gin.Context) {
 	c.JSON(200, gin.H{
 		"body": "Tweet content",

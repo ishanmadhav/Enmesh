@@ -8,14 +8,14 @@ import (
 )
 
 func main() {
-	r:=gin.Default()
-	r.GET("/", func(c *gin.Context){
+	r := gin.Default()
+	r.GET("/", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{
-      		"message": "pong",
-    		})
+			"message": "pong",
+		})
 	})
 
 	routes.TweetRoutes(r.Group("api"))
-	
+
 	r.Run()
 }
